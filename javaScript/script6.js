@@ -29,3 +29,33 @@
 
 // Escribe tu JavaScript aqui (para incluirlo en <script>):
 // let contador = 0;
+
+getElementbyId("btn-inc").addEventListener("click", () => {
+    contador++;
+    actualizarContador();
+});
+
+getElementbyId("btn-dec").addEventListener("click", () => {
+    if (contador > 0) {
+        contador--;
+        actualizarContador();
+    }
+});
+
+getElementbyId("btn-reset").addEventListener("click", () => {
+    contador = 0;
+    actualizarContador();
+});
+
+function actualizarContador() {
+    const numeroElement = getElementbyId("numero");
+    numeroElement.textContent = contador;
+    if (contador === 0) {
+        numeroElement.classList.add("rojo");
+        numeroElement.classList.remove("verde");
+    } else {
+        numeroElement.classList.add("verde");
+        numeroElement.classList.remove("rojo");
+    }
+}
+

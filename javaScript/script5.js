@@ -34,3 +34,28 @@ function sumar(a, b) {
 function operar(a, b, callback) {
     return callback(a, b);
 }
+
+function restar(a, b) {
+    return a - b;
+}  
+
+function multiplicar(a, b) {
+    return a * b;
+}
+
+function dividir(a, b) {
+    if (b === 0) {
+        return "Error: Division por cero";
+    }
+    return a / b;
+}
+
+const operaciones = [sumar, restar, multiplicar, dividir];
+
+const a = 10;
+const b = 5;   
+
+operaciones.forEach(op => {
+    const resultado = operar(a, b, op);
+    console.log(`Resultado de ${op.name}(${a}, ${b}) = ${resultado}`);
+});

@@ -1,3 +1,3 @@
 # basicos_js
 
-Ejercicios basicos de la asiganatura de Entorno de clientes de Java Script
+Ejercicios basicos de la asiganatura Desarrollo en entorno de cliente - JavaScript
